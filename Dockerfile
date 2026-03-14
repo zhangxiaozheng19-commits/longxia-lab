@@ -1,7 +1,7 @@
 FROM nginx:alpine
 COPY . /usr/share/nginx/html/
 
-# 让 Nginx 监听 9000 端口（抖音云要求）
+
 RUN sed -i 's/listen       80;/listen       9000;/' /etc/nginx/conf.d/default.conf
 
 RUN mkdir -p /opt/application
